@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="en">
+{% load staticfiles %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>Album example · Bootstrap</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  </style>
+  <!-- Custom styles for this template -->
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Pujaan Hatiku</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{% url 'about' %}">Tentang Seminar Ini</a>
+          <a class="nav-item nav-link" href="#">Peserta Terdaftar</a>
+          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="{% static 'pujaanhatiku.jpeg'%}">Get Undangan .JPG</a>
+          <a class="nav-item nav-link" href="http://www.claromakassar.com">About Claro</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">About Seminar Pujaan Hatiku</h1>
+        <span class="badge badge-pill badge-primary">Sulawesi Selatan</span>
+        <span class="badge badge-pill badge-secondary">Sulawesi Barat</span>
+        <span class="badge badge-pill badge-success">Sulawesi Tenggara</span>
+        <span class="badge badge-pill badge-danger">Sulawesi Utara</span>
+        <span class="badge badge-pill badge-warning">Gorontalo</span>
+        <br />
+      </div>
+    </section>
+
+    <div>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Pertanyaan</th>
+            <th scope="col">Jawaban</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Siapa saja yang boleh mengikuti seminar ini ?</td>
+            <td>Semua pasangan suami Istri, baik Gembala Sidang / Jemaat dalam wilayah Sulawesi</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Kapan seminar ini di adakan ?</td>
+            <td>Seminar ini diadakan di Makassar, tanggal 11-13 September 2019 di hotel Claro Makassar</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Berapa biaya yang dibebankan bagi peserta ?</td>
+            <td>Biaya Peserta = Rp. 1.250.000,- </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </html>
