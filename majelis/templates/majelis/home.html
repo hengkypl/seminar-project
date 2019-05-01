@@ -1,20 +1,23 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block content %}
   <main role="main">
 
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Seminar Pujaan Hatiku</h1>
         <p class="lead text-muted">Anda di undang ! Untuk menghadiri seminar ini. <br /> </p>
+        <h5>
         <span class="badge badge-pill badge-primary">Sulawesi Selatan</span>
         <span class="badge badge-pill badge-secondary">Sulawesi Barat</span>
         <span class="badge badge-pill badge-success">Sulawesi Tenggara</span>
         <span class="badge badge-pill badge-danger">Sulawesi Utara</span>
         <span class="badge badge-pill badge-warning">Gorontalo</span>
-        <img src="{% static 'pujaanhatiku.jpeg' %}" width=70% />
+        </h5>
+        <img src="{% static 'pujaanhatiku.jpeg' %}" width=60% />
         <br />
-        <a href="#" class="btn btn-primary my-2">Segera ! <br /> Daftarkan Diri Anda</a>
+        <a href="{% url 'register' %}" class="btn btn-primary my-2">Segera ! <br /> Daftarkan Diri Anda</a>
         <br />
         <p class="lead text-muted">Atau Kontak Panitia Untuk Informasi Lebih Lanjut. <br />
           Hubungi : Frieda L - 0821 9571 2478 atau melalui
@@ -71,3 +74,5 @@
 
 
         </main>
+
+{% endblock %}

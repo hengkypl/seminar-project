@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'seminar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
+        'NAME': 'seminar',
         'USER': 'hpl',
         'PASSWORD': 'meimei',
         'HOST' : 'localhost',
