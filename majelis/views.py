@@ -7,6 +7,3 @@ def home(request):
 
 def about(request):
     return render(request, 'majelis/about.html')
-
-def register(request):
-    return render(request, 'register.html')

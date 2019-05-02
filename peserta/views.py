@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Peserta
 
 
@@ -11,8 +11,16 @@ def pesertahome(request):
 def register(request):
     if request.method == 'POST':
         peserta = Peserta()
-        peserta.nama=request.POST['']
+        peserta.nama = request.POST['nama']
+        peserta.tgllahir = request.POST['tgllahir']
+        peserta.hp = request.POST['hp']
+        peserta.jemaat = request.POST['jemaat']
+        peserta.wilayah = request.POST['wilayah']
+        peserta.tshirt = request.POST['tshirt']
+        peserta.catatan = request.POST['catatan']
+        peserta.foto = request.FILES['foto']
         peserta.save()
+        return redirect('home')
 
     else:
-        return render(request, 'register.html')
+        return render(request, 'peserta/register.html')
