@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'keuangan.apps.KeuanganConfig',
     'phonenumber_field',
     'blog.apps.BlogConfig',
     'peserta.apps.PesertaConfig',

@@ -6,6 +6,7 @@ import majelis.views
 import peserta.views
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', majelis.views.home, name='home'),

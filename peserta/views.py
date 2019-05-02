@@ -1,11 +1,11 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, get_object_or_404
 from .models import Peserta
-
 
 # Create your views here.
 
 def pesertahome(request):
-    return render(request, 'peserta/peserta.html')
+    zpesertas = Peserta.objects
+    return render(request, 'peserta/peserta.html', {'zpeserta':zpesertas})
 
 
 def register(request):
