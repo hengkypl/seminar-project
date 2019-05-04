@@ -3,31 +3,36 @@
 
 {% block content %}
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="jumbotron" align = "center" >
-				<h2>
-					Mereka yang telah terdaftar <br /> mengikuti seminar ini!
-				</h2>
-			</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="jumbotron" align = "center" >
+      <h2>
+        Mereka yang telah terdaftar <br /> mengikuti seminar ini!
+      </h2>
+    </div>
+  </div>
+</div>
 
-      {% for zpeserta in zpeserta.all %}
 
-      <div class="row">
-				<div class="col-md-3">
-					<div class="card" align="center" >
-						<img class="card-img-top" alt="Foto" src="{{ zpeserta.foto.url }}" />
-						<div class="card-block">
-							<h5 class="card-title">
-								{{ zpeserta.nama }}
-							</h5>
-              <p class="card-text"> {{ zpeserta.jemaat }} - {{ zpeserta.wilayah }}</p>
-						</div>
-					</div>
-				</div>
-			</div>
 
-      {% endfor %}
+<div class="row" pt-10>
+
+{% for zpeserta in zpeserta.all %}
+
+<div class="col-md-3">
+  <div class="card" align="center" >
+    <img class="card-img-top" alt="Foto" src="{{ zpeserta.foto.url }}" />
+    <div class="card-block">
+      <h5 class="card-title">
+        {{ zpeserta.nama }}
+      </h5>
+      <p class="card-text"> {{ zpeserta.jemaat }} - {{ zpeserta.wilayah }}</p>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+
+</div>
 
 {% endblock %}

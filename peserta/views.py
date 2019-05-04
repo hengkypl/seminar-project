@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Peserta
 
 # Create your views here.
@@ -20,7 +20,7 @@ def register(request):
         peserta.catatan = request.POST['catatan']
         peserta.foto = request.FILES['foto']
         peserta.save()
-        return redirect('home')
+        return redirect('pesertahome')
 
     else:
         return render(request, 'peserta/register.html')
