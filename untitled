@@ -1,0 +1,9 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=nelliabadi
+Group=www-data
+WorkingDirectory=/home/nelliabadi/seminar-project
+ExecStart=/home/nelliabadi/myvenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/nelliabadi/seminar-project/seminar.sock seminar.wsgi:application
