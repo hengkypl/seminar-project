@@ -2,51 +2,52 @@
 {% load staticfiles %}
 
 {% block content %}
-  <main role="main">
+<main role="main">
 
-    <section class="jumbotron text-center">
-      <div class="container pt-1">
-        <h1 class="jumbotron-heading">Pujaan Hatiku - Seminar Pasutri</h1>
-        <h5>
-        <span class="badge badge-pill badge-primary">Sulawesi Selatan</span>
+  <section class="jumbotron text-center">
+    <div class="container pt-1">
+      <h1 class="jumbotron-heading">Pujaan Hatiku - Seminar Pasutri</h1>
+      <h5>
+        <span class="badge badge-pill badge-warning">Gorontalo</span>
         <span class="badge badge-pill badge-secondary">Sulawesi Barat</span>
+        <span class="badge badge-pill badge-primary">Sulawesi Selatan</span>
+        <span class="badge badge-pill badge-dark">Sulawesi Tengah</span>
         <span class="badge badge-pill badge-success">Sulawesi Tenggara</span>
         <span class="badge badge-pill badge-danger">Sulawesi Utara</span>
-        <span class="badge badge-pill badge-warning">Gorontalo</span>
-        </h5>
-        <br />
-        <a href="{% static 'pujaanhatiku.jpeg'%}" class="btn btn-primary my-2">Share seminar ini pada yang lain</a>
+      </h5>
+      <br />
+      <a href="{% static 'pujaanhatiku.jpeg'%}" class="btn btn-primary my-2">Share seminar ini pada yang lain</a>
 
-      </div>
-    </section>
-
-    <div>
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Pertanyaan</th>
-            <th scope="col">Jawaban</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Siapa saja yang boleh mengikuti seminar ini ?</td>
-            <td>Semua pasangan suami Istri, baik Gembala Sidang / Jemaat dalam wilayah Sulawesi</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Kapan seminar ini di adakan ?</td>
-            <td>Seminar ini diadakan di Makassar, tanggal 11-13 September 2019 di hotel Claro Makassar</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Berapa biaya yang dibebankan bagi peserta ?</td>
-            <td>Biaya Peserta = Rp. 1.250.000,- </td>
-          </tr>
-        </tbody>
-      </table>
     </div>
+  </section>
 
-{% endblock %}
+  <div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Pertanyaan</th>
+          <th scope="col">Jawaban</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Siapa saja yang boleh mengikuti seminar ini ?</td>
+          <td>Semua pasangan suami Istri, baik Gembala Sidang / Jemaat dalam wilayah Sulawesi</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Kapan seminar ini di adakan ?</td>
+          <td>Seminar ini diadakan di Makassar, tanggal 11-13 September 2019 di hotel Claro Makassar</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Berapa biaya yang dibebankan bagi peserta ?</td>
+          <td>Biaya Peserta = Rp. 1.250.000,- </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  {% endblock %}
