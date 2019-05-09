@@ -1,40 +1,25 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
 
 {% block content %}
 
 <!DOCTYPE html>
-     <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <hr class="featurette-divider">
+<hr class="featurette-divider">
 
-      <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
-        <div class="row" pt-10>
-          <div class="col-lg-4" >
-            <span class="border border-success"></span>
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Tentang Seminar ini</h2>
-            <p>Informasi yang perlu anda ketahui tentang seminar ini</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Another info</h2>
-            <p>Informasi lainnya</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Last but not least</h2>
-            <p>Another info.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+<div class="container marketing">
+  {% for zblog in zblog.all %}
 
 
+  <div class="col-lg-4">
+    <img class="rounded-circle" src="{{ zblog.image.url }}" alt="Generic placeholder image" width="140" height="140">
+    <h2>{{ zblog.title }}</h2>
+    <p>{{ zblog.body }}</p>
+  </div><!-- /.col-lg-4 -->
+
+  {% endfor %}
+</div>
 
 {% endblock %}
