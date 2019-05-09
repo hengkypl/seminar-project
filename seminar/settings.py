@@ -118,11 +118,8 @@ TIME_ZONE = 'Asia/Makassar'
 
 USE_I18N = True
 
-USE_L10N = False
+USE_L10N = True
 
-DATE_FORMAT = "d/m/Y"
-DATE_INPUT_FORMATS = ('%d-%m-%Y')
-SHORT_DATE_FORMAT = "d/m/Y"
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
