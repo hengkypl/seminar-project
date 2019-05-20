@@ -10,3 +10,7 @@ class PesertaAdmin(admin.ModelAdmin):
     search_fields = ['nama', 'hp']
 
 admin.site.register(Peserta, PesertaAdmin)
+
+
+admin.site.site_header='Application Dashboard'
+admin.site.site_title = "Dashboard - Seminar Pasutri";
