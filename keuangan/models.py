@@ -22,3 +22,4 @@ class Keuangan(models.Model):
     class Meta:
         verbose_name = 'Keuangan'
         verbose_name_plural = 'Keuangan'
+        ordering = ['tanggal']

@@ -5,7 +5,7 @@ from .models import Peserta
 #admin.site.register(Peserta)
 
 class PesertaAdmin(admin.ModelAdmin):
-    list_display = ('nama', 'tgllahir', 'jemaat', 'wilayah', 'hp', 'tshirt')
+    list_display = ('nama', 'tgllahir', 'jemaat', 'wilayah', 'hp', 'tshirt', 'catatan')
     list_filter = ['wilayah']
     search_fields = ['nama', 'hp']
 
