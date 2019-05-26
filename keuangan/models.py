@@ -12,7 +12,7 @@ ITEM_KATEGORI = (
 class Keuangan(models.Model):
     tanggal = models.DateField()
     kategori = models.CharField(choices=ITEM_KATEGORI, max_length=10)
-    keterangan = models.TextField(max_length=100)
+    keterangan = models.CharField(max_length=100)
     masuk = models.DecimalField(max_digits=15, decimal_places=2)
     keluar = models.DecimalField(max_digits=15, decimal_places=2)
 

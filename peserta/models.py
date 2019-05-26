@@ -21,10 +21,10 @@ ITEM_WILAYAH = (
 )
 
 class Peserta(models.Model):
-    nama = models.TextField(max_length=50)
+    nama = models.CharField(max_length=50)
     tgllahir = models.DateField(blank=True, null=True)
-    hp = models.TextField(max_length=20)
-    jemaat = models.TextField(max_length=50)
+    hp = models.CharField(max_length=20)
+    jemaat = models.CharField(max_length=50)
     wilayah = models.CharField(choices=ITEM_WILAYAH, max_length=10)
     tshirt = models.CharField(choices=ITEM_TSHIRT, max_length=3)
     arrivaldate = models.DateField(null = True, blank=True)
