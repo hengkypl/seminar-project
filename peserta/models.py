@@ -29,8 +29,9 @@ class Peserta(models.Model):
     tshirt = models.CharField(choices=ITEM_TSHIRT, max_length=3)
     arrivaldate = models.DateField(null = True, blank=True)
     arrivaltime = models.TimeField(null = True, blank=True)
-    catatan = models.TextField()
-    foto = models.ImageField(upload_to='foto/', blank=True)
+    catatan = models.TextField(blank=True)
+    foto = models.ImageField(upload_to='foto/', blank = True, default='noimg.png')
+
 
     def __str__(self):
         return self.nama
