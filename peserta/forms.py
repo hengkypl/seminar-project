@@ -15,5 +15,5 @@ class PesertaForm(forms.ModelForm):
             }
         fields = ('nama', 'tgllahir', 'hp', 'jemaat', 'wilayah', 'tshirt', 'catatan', 'foto')
         widgets = {
-            'tgllahir': forms.SelectDateWidget(years=range(1940, 1999), attrs={'style': 'display: inline-block; width: 15%;'}),
+            'tgllahir': forms.SelectDateWidget(years=range(1940, 1999), attrs={'style': 'display: inline-block; width: 33%;'}),
         }
